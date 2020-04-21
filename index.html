@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JavaScript Challenge</title>
+
+	<!-- jQuery Form, Additional Methods, Validate -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/additional-methods.min.js"></script>
+
+	<!-- Your JavaScript Form Validator -->
+	<script src="js/form-validate.js"></script>
+
+
+</head>
+<body>
+
+
+<p id="paragraph1">Every day is taco ipsum tuesday. Say taco one more time. It’s raining tacos,
+	from out of the sky, tacos, don’t even ask why. 50 cent tacos! I’ll take 30.
+	I’ve been following that taco truck around all day. Make it a double there pal.
+	Fish tacos with cabbage slaw and a side of chips and guac. Tacos for breakfast,
+	lunch and dinner. Pico de gallo, on the side please. Let’s do a beef and a
+	chicken, and one with both. It’s raining tacos, from out of the sky, tacos,
+	don’t even ask why.</p>
+
+<p id="paragraph2">50 cent tacos! I’ll take 30. Um, Tabasco? No thanks, do you have any
+	Cholula? Does guac cost extra? I’d have to say, those tacos are on fleek.
+	Fish tacos with cabbage slaw and a side of chips and guac. Ooh, with diced
+	onions and a pinch of cilantro. Tacos, again? This will be 5 times this
+	week and it’s only Tuesday. You   see, the refried beans are really just the
+	adhesive necessary to apply the soft tortilla to the hard taco shell.
+	Let’s do a beef and a chicken, and one with both.</p>
+
+<p id="paragraph3">50 cent tacos! I’ll take 30. Give me tacos, or give me death. Flour or
+	corn tortillas? I’ve been following that taco truck around all day. Fish
+	tacos with cabbage slaw and a side of chips and guac. BARBACOA!! CARNITAS!!
+	Say taco one more time. Burritos are very tasty. Fish tacos with cabbage
+	slaw and a side of chips and guac. Make it a double there pal. Ooh, with
+	diced onions and a pinch of cilantro. TACOS!! Does guac cost extra?
+	Tacos for breakfast, lunch and dinner. Does guac cost extra?</p>
+
+<script>
+	let paragraph1 = document.getElementById("paragraph1");
+	let paragraph2 = document.getElementById("paragraph2");
+	let paragraph3 = document.getElementById("paragraph3");
+
+	<!--Tier 1 Highlight entire paragraph-->
+	paragraph1.addEventListener('mouseover', event=>{
+		paragraph1.style.backgroundColor = "red";
+	});
+
+	<!--Tier 1 Change text font-->
+	paragraph2.addEventListener('mouseover', event=>{
+		paragraph2.style.fontFamily = "Impact, Charcoal, sans-serif";
+	});
+
+
+</script>
+
+<!--Tier 2 hightlight text, non successful-->
+<script src="jquery.min.js"></script>
+<script src="highlight.pack.js"></script>
+
+<pre><code class="javascript">test test;
+</code></pre>
+<input id="b" type="button" value="highlight!" />
+<script>
+	$('#b').click(function() {
+		hljs.webkitTapHighlightColor($('code').get(0));
+
+	});
+
+</script>
+
+
+<!--TESTING OUT OTHER JS for shuffle?
+
+	function shuffle(array) {
+		var currentIndex = array.length, paragraph3, randomIndex;
+		while (0!== currentIndex) {
+			randomIndex = Math.floor(Math.random() * currentIndex);
+			currentIndex -= 1;
+
+			paragraph3 = array[currentIndex];
+			array[currentIndex] = array[randomIndex];
+			array[randomIndex] = paragraph3;
+		}
+
+		return array;
+	}
+	var arr = [2, 11, 37, 42];
+	shuffle(arr);
+	console.log(arr);
+-->
+
+</body>
+</html>
